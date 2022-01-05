@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MainController {
 
 	@RequestMapping("/")
-	public String hello() {
-		return "test";
+	public String DocumentList() {
+		return "DocumentList";
 	}
 	
 }
