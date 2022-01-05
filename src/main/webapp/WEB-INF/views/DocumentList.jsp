@@ -16,19 +16,19 @@
 <body>
 
 <div id="contents">
-		<form name="listForm" method="post">
-		   
-		   <div id="table">
-					
-	       </div> <!-- table -->
-	       
-	       <div>
-	       	   <br>
-		       <button id="btn_excelDownload"> Download </button>
-	       </div>
-	       
-		</form>
-	</div>
+	<form name="listForm" method="post">
+	   
+	   <div id="table">
+				
+       </div> <!-- table -->
+       
+       <div>
+       	   <br>
+	       <button id="btn_excelDownload"> Download </button>
+       </div>
+       
+	</form>
+</div>
 
 
 </body>
