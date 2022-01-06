@@ -22,10 +22,25 @@ public class DocumentServiceimpl implements DocumentService {
 	private DocumentRepository documentRepository;
 	
 	@Override
+	public int createDocument() throws Exception {
+		return 0;
+	}
+
+	@Override
 	public List<Document> readDocuments() throws Exception {
 		return documentRepository.findAll();
 	}
-
+	
+	@Override
+	public int updateDocument() throws Exception {
+		return 0;
+	}
+	
+	@Override
+	public int deleteDocument() throws Exception {
+		return 0;
+	}
+	
 	@Override
 	public void poiExcelDownload(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
@@ -55,7 +70,6 @@ public class DocumentServiceimpl implements DocumentService {
 		model.put("dataList", dataList);
 		
 		//poiExcelDownView.renderMergedOutputModel(model, request, response);
-		
 		
 	}
 

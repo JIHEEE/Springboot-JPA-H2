@@ -29,8 +29,8 @@ public class SpringbootJpaH2Application {
 			@Override
 			public void run(ApplicationArguments args) throws Exception {
 				memberRepository.save(new Member("1", "Andrew", 45));
-				memberRepository.save(new Member("2", "White", 30));
-				memberRepository.save(new Member("3", "Black", 24));
+				memberRepository.save(new Member("2", "MJ", 30));
+				memberRepository.save(new Member("3", "Tom", 24));
 			}
         };
     }

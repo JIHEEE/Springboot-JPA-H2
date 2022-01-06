@@ -9,8 +9,15 @@ import com.oopsw.jh.model.Document;
 
 public interface DocumentService {
 	
-	// 문서 리스트
+	// create
+	public int createDocument() throws Exception;
+	// read
 	public List<Document> readDocuments() throws Exception;
+	// update
+	public int updateDocument() throws Exception;
+	// delete
+	public int deleteDocument() throws Exception;
+	
 	
 	// 엑셀 다운로드
 	public void poiExcelDownload(HttpServletRequest request, HttpServletResponse response) throws Exception; 
