@@ -26,13 +26,18 @@ public class MemberServiceImpl implements MemberService{
 	}
 
 	@Override
-	public int updateMember() throws Exception {
-		return 0;
+	public Member insertMember(Member member) throws Exception {
+		return memberRepository.save(member);
+	}
+	
+	@Override
+	public Member updateMember() throws Exception {
+		return null;
 	}
 
 	@Override
-	public int deleteMember() throws Exception {
-		return 0;
+	public void deleteMember(String id) throws Exception {
+		memberRepository.deleteById(id);
 	}
 
 }
