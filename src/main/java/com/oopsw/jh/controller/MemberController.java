@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -30,10 +31,10 @@ public class MemberController {
 		Member member = memberService.getMemberById(id);
 		
 		return member;
-	
+
 	}
 	
-	@PutMapping("/member")
+	@PostMapping("/member")
 	public Member insertMember(Member paramMember) throws Exception {
 //		paramMember.setId("4");
 //		paramMember.setName("Amy");
@@ -41,11 +42,23 @@ public class MemberController {
 		
 		Member member = memberService.insertMember(paramMember);
 		return member;
+		
+	}
+	
+	@PutMapping("/member")
+	public Member updateMember(Member paramMember) throws Exception {
+		
+		Member member = memberService.updateMember(paramMember);
+		
+		return member;
+		
 	}
 	
 	@DeleteMapping("member")
 	public void deleteMember(String id) throws Exception {
+		
 		memberService.deleteMember(id);
+		
 	}
 	
 	

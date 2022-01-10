@@ -31,8 +31,18 @@ public class MemberServiceImpl implements MemberService{
 	}
 	
 	@Override
-	public Member updateMember() throws Exception {
-		return null;
+	public Member updateMember(Member member) throws Exception {
+		
+		Member updateMember = memberRepository.findMemberById(member.getId()); 
+		
+		if(updateMember != null) {
+			updateMember.setAge(member.getAge());
+			updateMember.setName(member.getName());
+			
+			return memberRepository.save(updateMember);
+		}
+		
+		return memberRepository.save(member);
 	}
 
 	@Override
